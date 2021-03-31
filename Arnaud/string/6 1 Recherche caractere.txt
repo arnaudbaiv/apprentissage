@@ -1,0 +1,42 @@
+Debut rechercheCarac
+
+	Variables locales
+		var texte :T <- ""
+		var car :T <- ""
+		var pos :N <- 1
+		var premPos :N <- 0
+		var derPos :N <- 0
+		var occuCar :N <- 0
+	Fin variables locales
+	
+	Afficher "Entrer votre texte : "
+	Saisir texte
+	Afficher "Entrer le caractère à rechercher : "
+	saisir car
+	
+	Tant que pos <= longueur(texte) 
+	
+		si (carac(texte,pos) = car 
+			alors
+				premPos <- pos
+				occuCar <- occuCar + 1
+				
+				si (premPos <> pos)
+					alors
+						derPos <- pos
+				finsi
+				
+		finsi
+		pos <- pos + 1
+	Fin tant que
+	
+	si premPos = 0
+		alors
+			Afficher "Le caractère n'est pas dans le texte."
+		sinon
+			Afficher "Première position du caractère : ", premPos
+			Afficher "Dernière position du caractère : ", derPos
+			Afficher "Nombre de fois qu'il apparait : ", occuCar
+	finsi
+	
+Fin rechercheCarac

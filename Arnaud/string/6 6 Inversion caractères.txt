@@ -1,0 +1,18 @@
+Debut inversionCarac
+
+	Variables locales
+		var pos :N
+		var texte :T
+		var result :T <- ""
+
+	Afficher "Entrez un texte :"
+	Saisir texte	
+	pos <- longueur(texte)
+	
+	tant que pos > 0
+		result <- result + caract(texte, pos)
+		pos <- pos - 1
+	fin tant que
+	Afficher result
+	
+Fin inversionCarac	

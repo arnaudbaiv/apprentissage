@@ -1,0 +1,41 @@
+Debut rechercheTexte
+
+	Variables locales
+		var source :T <- ""
+		var recherche :T <- ""
+		var posSource :N <- 1
+		var posRecherche :N <- 1
+		var posDebut :N <- 1
+		var posFin :N <- 1
+	Fin variables locales
+	
+	Afficher "Entrer votre texte : "
+	Saisir source
+	Afficher "Entrer le texte à rechercher : "
+	saisir recherche
+	
+	Tant que posRecherche <= longueur(source) - longueur(recherche)
+	
+		si caract(recherche,posRecherche) = caract(source,posSource)
+			Alors
+				posDebut <- posSource
+				posFin <- posSource
+				
+				Tant que caract(recherche,posRecherche) = caract(source,posSource) & posRecherche <= longueur(Recherche)
+					
+					posFin <- posFin + 1
+				Fin tant que
+				
+		Fin si		
+	
+	
+	Fin tant que		
+	
+	si posFin = longueur(recherche)
+		Alors
+			Afficher "Texte retrouvé du caractère ", posDebut, " au caractère ", posFin
+		Sinon
+			Afficher "Texte demandé pas retrouvé."
+	Fin si
+	
+Fin rechercheTexte

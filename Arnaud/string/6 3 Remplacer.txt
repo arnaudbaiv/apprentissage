@@ -1,0 +1,20 @@
+Debut remplacer
+	
+	Variables locales
+		var source :T <- ""
+		var remplacer :T <- ""
+		var remplacement :T <- ""
+	Fin Variables locales
+	
+	Afficher "Source"
+	Saisir source
+	Afficher "A remplacer"
+	Saisir remplacer
+	Afficher "Remplacement"
+	Saisir remplacement
+	
+	Si remplacer = sousChaine
+		Alors
+			sousChaine <- remplacement
+	
+Fin remplacer

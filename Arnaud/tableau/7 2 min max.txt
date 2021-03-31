@@ -1,0 +1,40 @@
+debut t_minmax
+	variables locales
+		const TAILLE :n <- 20
+		var tab : N[TAILLE]
+		var ind : N <- 0
+		//var min : N <- 0
+		var posMin : N <- 0
+		var posMax : N <- 0
+	fin variables locales
+	
+	// initialisation du tableau
+		Afficher "Entrez les ", TAILLE, " valeurs : "
+		Pour ind allant de 1 à TAILLE
+			saisir tab[ind]
+			ind suivant
+			
+	//calcul du min et du max
+		//min <- tab[1]
+		posMin <- 1
+		posMax <- 1
+		Pour ind allant de 2 à TAILLE
+			si tab[posMin] > tab[ind]//min > tab[ind]
+				alors
+					//min <- tab[ind]
+					posMin <- ind
+			finsi
+			si tab[posMax] < tab[ind]
+				alors
+				posMax <- ind
+			finsi
+		ind suivant
+		
+	//affichage résultat
+		Afficher "La plus petite valeur est ", tab[posMin] //min
+		Afficher "Sa position : ", posMin
+		Afficher "La plus grande valeur est ", tab[posMax] 
+		Afficher "Sa position : ", posMax
+		
+		
+fin t_minmax

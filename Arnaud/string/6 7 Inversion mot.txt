@@ -1,0 +1,28 @@
+debut inversionMot
+	
+	variables locales
+		var espace :t <- " "
+		var source :t 
+		var texte :t <- ""
+		var mot :t <- ""
+		var pos :n <- 1
+	fin variables locales
+	
+	Afficher "Entrez texte :"
+	saisir source
+	tant que pos <= longueur(source)
+	
+		si caract(source,pos) <> espace
+			alors
+				mot <- mot + caract(source,pos)
+			sinon 
+				texte <- mot + espace + texte
+				mot <- ""
+		finsi
+		
+		pos <- pos + 1
+	fin tant que
+	texte <- mot + espace + texte
+	Afficher texte
+	
+fin inversionMot

@@ -1,0 +1,39 @@
+Debut recherche
+
+	Variables locales
+		var posDepart :N
+		var texteSource :T
+		var texteCherche :T
+		var present :B
+		var posSource :N
+		var posCherche :N
+		
+	Fin variables locales
+	
+		tant que posDepart <= posDepart longueur(texteSource) - longueur(texteCherche) + 1
+			posSource <- posDepart
+			posCherche <- 1
+			present <- vrai
+			tant que posSource <= longueur(texteSource) et posCherche <= longueur(texteCherche) et present
+			
+				si caract(texteSource, posSource) = caract(texteCherche, posCherche)
+					alors
+						posSource <- posSource + 1
+						posCherche <- posCherche + 1
+					sinon
+						present <- faux
+				fin si
+				
+			fin tant que
+			si present // souschaine(texteSource, posDepart, posDepart + longueur(texteCherche)) = texteCherche
+				alors	
+					// traitement ok
+					// texteSource <- ce qui est devant + nouveau mot + ce qui est après
+					posDepart <- posDepart + longueur(texteCherche)
+				sinon
+					// traitement ko
+					posDepart <- posDepart + 1
+			fin si
+		fin tant que
+		
+Fin recherche

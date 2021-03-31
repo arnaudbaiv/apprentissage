@@ -1,0 +1,17 @@
+Debut plusGrand
+
+	Variables locales
+
+
+
+	Fin variables locales
+
+	Afficher "1er mot :
+	saisir mot1
+	Afficher "2eme mot:
+	saisir mot2
+	
+	tant que 
+	
+
+Fin plusGrand
