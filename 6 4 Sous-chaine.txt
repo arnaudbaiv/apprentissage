@@ -1,0 +1,33 @@
+Debut sousCha
+ine
+
+	Variables locales
+		var texte :T <- ""
+		var depart :N <- 1
+		var fin :N <- 1
+		var chaine :T <- ""
+		var cpt :N <- 1
+	Fin variables locales
+	
+	Afficher "Entrez texte : "
+	Saisir texte
+	Afficher "Depart recherche : "
+	Saisir depart
+	Afficher "Fin recherche (non comprise) : "
+	Saisir fin
+	cpt <- depart
+	
+	Si depart < longueur(texte) & fin <= longueur(texte)
+		Alors
+		
+			Tant que cpt <= fin
+				chaine <- chaine + caract(texte, cpt)
+				cpt <- cpt + 1
+			Fin tant que
+		
+		Sinon
+			Afficher "Recherche impossible"
+	Fin si
+	Afficher chaine 
+	
+Fin sousChaine
