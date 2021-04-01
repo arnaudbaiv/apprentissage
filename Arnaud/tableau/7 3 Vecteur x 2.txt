@@ -1,0 +1,14 @@
+Debut vecteurx2
+
+	Variables locales
+		const TAILLE :n <- 16
+		var tab :n <- TAILLE
+		var ind :n <- 1
+	Fin variables locales
+		
+		tab[ind] <- 1
+	Pour ind allant de 2 à TAILLE
+		tab[ind] <- tab[ind - 1] * 2
+		ind suivant
+
+Fin vecteurx2
