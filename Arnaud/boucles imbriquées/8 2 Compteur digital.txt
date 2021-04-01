@@ -9,11 +9,13 @@ debut compteurDigital
 			alors
 				Afficher "00", cpt
 		finsi
-		si cpt < 100
+		si cpt < 100 et cpt > 10
 			alors
 				Afficher "0", cpt
 		finsi
-		Afficher cpt
-		cpt <- cpt + 1
+		si cpt > 100 
+			alors
+				Afficher cpt
+	cpt <- cpt + 1
 
 fin compteurDigital
