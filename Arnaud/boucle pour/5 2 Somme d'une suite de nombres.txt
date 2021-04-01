@@ -1,0 +1,42 @@
+/*Ecrire le programme qui affiche la somme des valeurs comprises entre deux nombres entrés au 
+clavier.
+ Les deux valeurs entrées font partie du total.
+ Si les deux valeurs sont identiques, le total est égal à cette valeur*/
+
+Debut sommeSuite
+
+	Variables locales
+		var nb1 :N
+		var nb2 :N
+		var somme :N
+	Fin variables locales
+	
+	Afficher "Entrez 1er nombre"
+	Saisir nb1
+	Afficher "Entrez 2eme nombre"
+	Saisir nb2
+	
+	si nb1 <> nb2
+		alors
+			si nb1 < nb2
+				alors
+					Afficher nb1
+					repeter
+					Afficher " + ", nb1
+					somme <- somme + nb1
+					nb1 <- nb1 + 1
+					jusqu'à ce que nb1 > nb2
+					Afficher " = ", somme
+				sinon
+					repeter
+					Afficher " + ", nb2
+					somme <- somme + nb2
+					nb2 <- nb2 + 1
+					jusqu'à ce que nb2 > nb1
+					Afficher " = ", somme
+				finsi
+		sinon
+			Afficher "Total = ", nb1
+	finsi
+		
+Fin sommeSuite
