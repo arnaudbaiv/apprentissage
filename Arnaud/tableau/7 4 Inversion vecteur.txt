@@ -1,0 +1,29 @@
+/* Ecrire le programme qui inverse un tableau de 10 nombres. */
+
+Debut inversionVecteur
+
+	Variables locales
+		const TAILLE :n <- 10
+		var tab :n <- TAILLE
+		var ind :n <- 0
+		var switch :n
+	Fin variables locales
+	
+	Afficher "Entrez vos ", TAILLE, " nombres"
+	Pour ind allant de 1 à 10
+		saisir tab[ind]
+		ind suivant
+	Afficher tab
+
+	cpt <- 1
+	Pour ind allant de TAILLE à 1 par pas de -1
+		Tant que TAILLE > cpt
+			switch <- tab[ind]
+			tab[ind] <- tab[cpt]
+			tab[cpt] <- switch
+			cpt <- cpt + 1
+			ind suivant
+		Fin tant que
+	
+
+Fin inversionVecteur
