@@ -1,0 +1,19 @@
+debut compteurDigital
+
+	variables locales
+		var cpt : N <- 0
+	fin variables locales
+	
+	Pour cpt allant de 1 à 999
+		si cpt < 10
+			alors
+				Afficher "00", cpt
+		finsi
+		si cpt < 100
+			alors
+				Afficher "0", cpt
+		finsi
+		Afficher cpt
+		cpt <- cpt + 1
+
+fin compteurDigital
