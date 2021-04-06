@@ -1,0 +1,22 @@
+Debut tablesMultiplication
+
+	Variables locales
+		var nbre :N
+		var cpt :N <- 1
+	Fin variables locales
+	
+	Afficher "Quelle table de multiplication voulez-vous?"
+	Tant que cpt <= 10 
+		saisir nbre
+		Si nbre < 0 ou nbre > 10
+			alors
+				Afficher "Veuillez rentrez un nombre entre 0 et 10 compris"
+			sinon
+				Afficher cpt, " * ", nbre, " = ", cpt * nbre
+				cpt <- cpt + 1
+		fin si
+		
+	Fin tant que
+	
+	
+Fin tablesMultiplication

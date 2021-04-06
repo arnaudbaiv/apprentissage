@@ -1,0 +1,24 @@
+Debut nombrePremiers
+
+	Variables locales
+		var cpt :N <- 1
+		var nbre :N <- 3
+		var cptPremiers :N <- 1
+		var test :N <- FAUX
+	Fin variables locales
+	
+	Afficher "2"
+	Tant que cptPremiers <= 100
+		Tant que cpt < nbre et test = FAUX
+			Si cpt mod nbre = 0 et cpt div nbre <> 1
+				alors
+					test <- VRAI
+				sinon
+					cptPremiers <- cptPremiers + 1
+					Afficher " / ", nbre
+			cpt <- cpt + 1
+		Fin tant que
+	nbre <- nbre + 1
+	Fin tant que
+	
+Fin nombrePremiers

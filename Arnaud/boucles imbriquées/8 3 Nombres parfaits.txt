@@ -1,0 +1,22 @@
+Debut nombresParfaits
+
+	Variables locales
+		var i :N
+		var cpt :N <- 1
+		var somme :N <- 0
+	Fin variables locales
+	
+	Pour i allant de 2 à 99
+		Tant que cpt <= i / 2
+			Si cpt mod i = 0
+				alors
+					somme <- somme + cpt
+					Si somme = i
+						alors
+							Afficher i, " ",
+			cpt <- cpt + 1		
+		Fin tant que
+		cpt <- 1
+		somme <- 0
+		i suivant
+Fin nombresParfaits

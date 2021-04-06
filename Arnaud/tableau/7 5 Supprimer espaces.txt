@@ -12,14 +12,14 @@ Debut supprimerEspaces
 	Afficher "Entrez votre texte : "
 	Pour ind allant de 1 à TAILLE
 		saisir tab[ind]
-		si tab[ind] = " "
+		si tab[ind] = ' '
 			alors
 				cptEspace <- cptEspace + 1
 				ind <- ind - 1
 	ind suivant
 	
 	Tant que TAILLE - cptEspace <= TAILLE
-		tab[TAILLE - cptEspace] <- " "
+		tab[TAILLE - cptEspace] <- ' '
 		cptEspace <- cptEspace + 1
 	Fin tant que
 	
