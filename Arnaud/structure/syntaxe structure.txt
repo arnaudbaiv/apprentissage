@@ -4,32 +4,39 @@
 Debut stagiaires
 
 	Variation locales
-		const TAILLE :N <- 10
-		var tab[TAILLE] :N 
+		Structure Personne	
+			var nom : T
+			var prenom : T
+			var date : Date
+		Fin structure
+		
+		Structure Date
+			var jour : N 
+			var mois : N 
+			var annee : N
+		Fin structure
+		
+		const nbreStagiaires :N <- 10
+		var tab[nbreStagiaires] :N 
 		var i :N
 		var stagiaire : Personne
 		var naissance : Date
 	Fin variation locales
 
-	Pour i allant de 1 à TAILLE
-		stagiaire <- CREER Personne
+	Pour cpt allant de 1 à nbreStagiaires
+		tab[i] <- CREER stagiaire
 		Afficher "Nom :"
-		saisir stagiaire.nom
-		stagiaire[i].nom <- stagiaire.nom
+		saisir tab[i].nom
 		Afficher "Prenom :"
-		saisir stagiaire.prenom
-		stagiaire[i].prenom <- stagiaire.prenom
-		Afficher "Date de naissance "
-		stagiaire.naissance <- CREER Date
+		saisir tab[i].prenom
+		tab[i] <- CREER naissance
+		Afficher "Date de naissance "	
 		Afficher "Jour : "
-		saisir stagiaire.date.jour
-		stagiaire[i].naissance.jour <- stagiaire.naissance.jour
+		saisir tab[i].naissance.jour
 		Afficher "Mois : "
-		saisir stagiaire.date.mois
-		stagiaire[i].naissance.mois <- stagiaire.naissance.mois
+		saisir tab[i].naissance.mois
 		Afficher "Annee : "
-		saisir stagiaire.date.annee
-		stagiaire[i].naissance.annee <- stagiaire.naissance.annee
+		saisir tab[i].naissance.annee
 	i suivant
 
 Fin stagiaires
