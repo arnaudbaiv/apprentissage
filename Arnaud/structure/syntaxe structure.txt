@@ -1,0 +1,35 @@
+//programme qui initialise les valeurs d'un tableau de 10 stagiaires:
+//nom, prénom, date de naissance
+
+Debut stagiaires
+
+	Variation locales
+		const TAILLE :N <- 10
+		var tab[TAILLE] :N 
+		var i :N
+		var stagiaire : Personne
+		var naissance : Date
+	Fin variation locales
+
+	Pour i allant de 1 à TAILLE
+		stagiaire <- CREER Personne
+		Afficher "Nom :"
+		saisir stagiaire.nom
+		stagiaire[i].nom <- stagiaire.nom
+		Afficher "Prenom :"
+		saisir stagiaire.prenom
+		stagiaire[i].prenom <- stagiaire.prenom
+		Afficher "Date de naissance "
+		stagiaire.naissance <- CREER Date
+		Afficher "Jour : "
+		saisir stagiaire.date.jour
+		stagiaire[i].naissance.jour <- stagiaire.naissance.jour
+		Afficher "Mois : "
+		saisir stagiaire.date.mois
+		stagiaire[i].naissance.mois <- stagiaire.naissance.mois
+		Afficher "Annee : "
+		saisir stagiaire.date.annee
+		stagiaire[i].naissance.annee <- stagiaire.naissance.annee
+	i suivant
+
+Fin stagiaires
